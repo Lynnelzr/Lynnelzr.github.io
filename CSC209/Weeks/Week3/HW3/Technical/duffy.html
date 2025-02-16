@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic 1</title>
+    <link id="themeStylesheet" rel="stylesheet" href="Css/style1.css">
+    <script>
+        function switchTheme() {
+            var theme = document.getElementById("themeStylesheet");
+            var sidebarImage = document.getElementById("sidebarImg");
+
+            if (theme.getAttribute("href") === "Css/style1.css") {
+                theme.setAttribute("href", "Css/style2.css");
+                sidebarImage.src = "https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/hkdl-platform/hkdl-global-assets/custom/duffy-and-friends-friendversary/DF-24-Friendversary-web-banner-7-16x9.jpg"; // New image for theme 2
+            } else {
+                theme.setAttribute("href", "Css/style1.css");
+                sidebarImage.src = "https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/hkdl-platform/hkdl-global-assets/custom/duffy-and-friends-friendversary/DF-24-Friendversary-web-banner-5-16x9.jpg"; // Original image for theme 1
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <link rel="stylesheet" href="Css/slideStyle.css">
+        <script src="Js/showSlides.js"></script>
+        <script>
+            const slidesData = [
+              { image: "Images/pan-xiaozhen-wXG5XF73o3w-unsplash.jpg", caption: "Who's Duffy" },
+              { image: "Images/brandi-alexandra-Mvav3d0Ki2k-unsplash.jpg", caption: "Who's Duffy" },
+              { image: "Images/rita-chou-21KlPS8bS20-unsplash.jpg", caption: "Who's Duffy" }
+            ];
+            window.onload = function() {
+              generateSlideshow(slidesData);
+              initSlideshow();
+            };
+          </script>          
+          
+          
+    </div>
+
+    <div class="topnav">
+        <a href="technical.html">Home</a>
+        <a href="duffy.html">Duffy</a>
+        <a href="shellieMay.html">ShellieMay</a>
+        <button onclick="switchTheme()" class="theme-btn" style="font-size: 15px;">Switch Theme</button>
+    </div>
+
+    <div class="content">
+        <div class="main">
+            <p>
+                Duffy the Disney Bear is Mickey Mouse’s very own teddy bear. Born from an original Walt Disney Imagineering story, Duffy continues to be a popular Disney character with fans around the world. He has even been dubbed “the bear of happiness and luck,” and he is surely bringing lots of happiness and luck to his fans.
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <img decoding="async" width="980" height="551" src="https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month.jpeg" alt="duffy month" class="wp-image-197667 perfmatters-lazy entered pmloaded" data-src="https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month.jpeg" data-srcset="https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month.jpeg 980w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-620x349.jpeg 620w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-768x432.jpeg 768w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-889x500.jpeg 889w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-300x169.jpeg 300w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-360x202.jpeg 360w" data-sizes="(max-width: 980px) 100vw, 980px" data-ll-status="loaded" sizes="(max-width: 980px) 100vw, 980px" srcset="https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month.jpeg 980w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-620x349.jpeg 620w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-768x432.jpeg 768w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-889x500.jpeg 889w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-300x169.jpeg 300w, https://attractionsmagazine.com/wp-content/uploads/2019/08/Duffy-Month-360x202.jpeg 360w">
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 My Website</p>
+    </div>
+
+</body>
+</html>

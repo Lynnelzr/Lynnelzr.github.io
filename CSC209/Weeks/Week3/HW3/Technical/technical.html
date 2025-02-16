@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Themed Website</title>
+    <link id="themeStylesheet" rel="stylesheet" href="Css/style1.css">
+    <script>
+        function toggleReadMe() {
+            var readMeText = document.getElementById("readMeText");
+            var btn = document.getElementById("readMeBtn");
+            if (readMeText.style.display === "none") {
+                readMeText.style.display = "block";
+                btn.innerText = "Hide";
+            } else {
+                readMeText.style.display = "none";
+                btn.innerText = "ReadMe";
+            }
+        }
+
+        function switchTheme() {
+            var theme = document.getElementById("themeStylesheet");
+            var sidebarImage = document.getElementById("sidebarImg");
+
+            if (theme.getAttribute("href") === "Css/style1.css") {
+                theme.setAttribute("href", "Css/style2.css");
+                sidebarImage.src = "https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/hkdl-platform/hkdl-global-assets/custom/duffy-and-friends-friendversary/DF-24-Friendversary-web-banner-7-16x9.jpg"; // New image for theme 2
+            } else {
+                theme.setAttribute("href", "Css/style1.css");
+                sidebarImage.src = "https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/hkdl-platform/hkdl-global-assets/custom/duffy-and-friends-friendversary/DF-24-Friendversary-web-banner-5-16x9.jpg"; // Original image for theme 1
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <link rel="stylesheet" href="Css/slideStyle.css">
+        <script src="Js/showSlides.js"></script>
+        <script>
+            const slidesData = [
+              { image: "Images/pan-xiaozhen-wXG5XF73o3w-unsplash.jpg", caption: "Welcome to Duffy's World" },
+              { image: "Images/brandi-alexandra-Mvav3d0Ki2k-unsplash.jpg", caption: "Explore the Garden" },
+              { image: "Images/rita-chou-21KlPS8bS20-unsplash.jpg", caption: "Adventure Awaits!" }
+            ];
+            window.onload = function() {
+              generateSlideshow(slidesData);
+              initSlideshow();
+            };
+          </script>
+          
+    </div>
+
+    <div class="topnav">
+        <a href="technical.html">Home</a>
+        <a href="duffy.html">Duffy</a>
+        <a href="shellieMay.html">ShellieMay</a>
+        <button onclick="switchTheme()" class="theme-btn" style="font-size: 15px;">Switch Theme</button>
+    </div>
+
+    <div class="content">
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                text-align: left;
+                padding: 10px;
+            }
+            table a {
+                color: inherit;        /* Inherits the color from the parent element */
+                font-weight: normal;   /* Ensures the font weight is consistent */
+            }
+
+            table a:hover {
+                text-decoration: underline; /* Optional: add underline on hover for clarity */
+            }
+
+        </style>
+        <div class="main">
+            <h2>Schedule Table</h2>
+            <table>
+                <tr>
+                    <th>Where</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><a href="garden.html">Garden</a></td>
+                    <td>With the rise of Duffy's popularity, Imagineers noticed many guests purchased multiple plush of Duffy, 
+                        giving the bears unique names and costumes. 
+                        That inspired Imagineers to create a companion to Duffy—his best friend, ShellieMay. 
+                        Based on the pair's increasing popularity, Imagineers decided to develop an entire collection of characters, 
+                        each with a distinct personality and talent: artistic cat friend, Gelatoni, dancing rabbit friend, StellaLou, 
+                        inventive dog friend, CookieAnn, and musical turtle friend, 'Olu Mel. </td>
+                </tr>
+                <tr>
+                    <td><a href="https://youtu.be/MLYQBRgTdUw?si=bVIrz98stWmZA8yj">Kitchen</a></td>
+                    <td>CookieAnn, a yellow dog with a sensitive nose and long floppy ears, is a passionate and optimistic friend who loves to invent something novel by combining things. 
+                        With a chef’s hat on her head, she is an “expert” in inventing unique recipes, bringing surprise and joy to her friends in unexpectedly delicious ways. 
+                        Curious about everything, CookieAnn’s inventions go beyond culinary creations. She has fun conjuring up out-of-the-box solutions to problems by combining different ideas. 
+                        Additionally, with her acute olfactory ability, she is able to smell “unsavory” happenings!</td>
+                </tr>
+                <tr>
+                    <td><a href = "https://sites.disney.com/waltdisneyimagineering/duffy-the-disney-bear/">Story</a></td>
+                    <td>Imagineers first created Duffy's story within the context of American Waterfront at Tokyo DisneySea. 
+                        Almost everything done at Imagineering starts with story. This particular story goes…when Mickey Mouse the sailor, 
+                        based in Cape Cod, was leaving on a long sea voyage, Minnie Mouse made Duffy to keep Mickey company during his travels. 
+                        Minnie presented her hand-sewn bear to Mickey in a duffel bag, which is how Mickey came up with the name Duffy. 
+                        But stories can evolve, and as Duffy's story has evolved, he and Mickey have visited many exciting places together, 
+                        meeting new friends along the way. With a willingness to do anything to bring a smile to his friends, and his quintessential innocence,
+                         Duffy takes all of us back to our childhood when we all had an "inner Duffy."</td>
+                </tr>
+            </table>
+
+            
+        </div>
+
+        <div class="sidebar">
+            <button id="readMeBtn" onclick="toggleReadMe()" style="font-weight: bold; margin-bottom: 15px;">About Me</button>
+            <p id="readMeText" style="display: none;">
+                Duffy met LinaBell when he was lost in the forest following a butterfly. LinaBell suddenly but masterfully took out her 
+                magnifying glass and started examining “clues” on Duffy’s body to figure out where he had come from. Thanks to her detective-like talent, 
+                Duffy was able to be reunited with Mickey Mouse. Duffy and the rest of the friends are often in awe of her ingenious ways of solving problems.
+            </p>
+          <img id="sidebarImg" src="https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/hkdl-platform/hkdl-global-assets/custom/duffy-and-friends-friendversary/DF-24-Friendversary-web-banner-5-16x9.jpg" alt="Duffy and Friends" class="sidebar-img">
+          <p>We are so excited to introduce to you our new friend of Duffy, LinaBell. She is a fox with an inquisitive mind and the intelligence that supports it. She finds joy and excitement in solving problems and mysteries.</p>
+        </div>
+      
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 My Website</p>
+    </div>
+
+</body>
+</html>
