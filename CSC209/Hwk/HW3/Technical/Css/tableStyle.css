@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+table a {
+    color: inherit;        /* Inherits the color from the parent element */
+    font-weight: normal;   /* Ensures the font weight is consistent */
+}
+
+table a:hover {
+    text-decoration: underline; /* Optional: add underline on hover for clarity */
+}

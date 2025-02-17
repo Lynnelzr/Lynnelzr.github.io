@@ -5,32 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Themed Website</title>
     <link id="themeStylesheet" rel="stylesheet" href="Css/style1.css">
-    <script>
-        function toggleReadMe() {
-            var readMeText = document.getElementById("readMeText");
-            var btn = document.getElementById("readMeBtn");
-            if (readMeText.style.display === "none") {
-                readMeText.style.display = "block";
-                btn.innerText = "Hide";
-            } else {
-                readMeText.style.display = "none";
-                btn.innerText = "ReadMe";
-            }
-        }
-
-        function switchTheme() {
-            var theme = document.getElementById("themeStylesheet");
-            var sidebarImage = document.getElementById("sidebarImg");
-
-            if (theme.getAttribute("href") === "Css/style1.css") {
-                theme.setAttribute("href", "Css/style2.css");
-                sidebarImage.src = "https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/hkdl-platform/hkdl-global-assets/custom/duffy-and-friends-friendversary/DF-24-Friendversary-web-banner-7-16x9.jpg"; // New image for theme 2
-            } else {
-                theme.setAttribute("href", "Css/style1.css");
-                sidebarImage.src = "https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/hkdl-platform/hkdl-global-assets/custom/duffy-and-friends-friendversary/DF-24-Friendversary-web-banner-5-16x9.jpg"; // Original image for theme 1
-            }
-        }
-    </script>
+    <script src="Js/readMe.js"></script>
+    <script src = "Js/switchTheme.js"></script>
 </head>
 <body>
 
@@ -38,6 +14,7 @@
         <link rel="stylesheet" href="Css/slideStyle.css">
         <script src="Js/showSlides.js"></script>
         <script>
+            //inorder to have different caption for different pages, we keep this part of js in the html
             const slidesData = [
               { image: "Images/pan-xiaozhen-wXG5XF73o3w-unsplash.jpg", caption: "Welcome to Duffy's World" },
               { image: "Images/brandi-alexandra-Mvav3d0Ki2k-unsplash.jpg", caption: "Explore the Garden" },
@@ -59,26 +36,7 @@
     </div>
 
     <div class="content">
-        <style>
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            th, td {
-                border: 1px solid #ddd;
-                text-align: left;
-                padding: 10px;
-            }
-            table a {
-                color: inherit;        /* Inherits the color from the parent element */
-                font-weight: normal;   /* Ensures the font weight is consistent */
-            }
-
-            table a:hover {
-                text-decoration: underline; /* Optional: add underline on hover for clarity */
-            }
-
-        </style>
+        <link rel="stylesheet" href="Css/tableStyle.css">
         <div class="main">
             <h2>Schedule Table</h2>
             <table>
