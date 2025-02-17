@@ -5,48 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Themed Website</title>
     <link id="themeStylesheet" rel="stylesheet" href="Css/style1.css">
-    <script src="Js/readMe.js"></script>
-    <script src = "Js/switchTheme.js"></script>
+    <link rel="stylesheet" href="Css/slideStyle.css">
+    <link rel="stylesheet" href="Css/tableStyle.css">
 </head>
 <body>
 
-    <div class="header">
-        <link rel="stylesheet" href="Css/slideStyle.css">
-        <script src="Js/showSlides.js"></script>
-        <script>
-            const slidesData = [
-              { image: "Images/pan-xiaozhen-wXG5XF73o3w-unsplash.jpg", caption: "Welcome to Duffy's World" },
-              { image: "Images/brandi-alexandra-Mvav3d0Ki2k-unsplash.jpg", caption: "Explore the Garden" },
-              { image: "Images/rita-chou-21KlPS8bS20-unsplash.jpg", caption: "Adventure Awaits!" }
-            ];
-            window.onload = function() {
-                generateSlideshow(slidesData);
-                initSlideshow();
-                
-                // background Music Logic
-                const music = document.getElementById('backgroundMusic');
-                const musicControlBtn = document.getElementById('musicControlBtn');
-                let isMusicPlaying = false;
-
-                music.play();
-                isMusicPlaying = true;
-                musicControlBtn.innerText = 'Stop Music';
-
-                musicControlBtn.addEventListener('click', function() {
-                    if (isMusicPlaying) {
-                        music.pause();
-                        musicControlBtn.innerText = 'Play Music';
-                    } else {
-                        music.play();
-                        musicControlBtn.innerText = 'Stop Music';
-                    }
-                    isMusicPlaying = !isMusicPlaying;
-                });
-            };
-
-          </script>
-          
-    </div>
+    <div class="header"></div>
 
     <div class="topnav">
         <a href="technical.html">Home</a>
@@ -56,11 +20,6 @@
         <button id="musicControlBtn" onclick="toggleMusic()" class="theme-btn" style="font-size: 15px;">Play Music</button>
     </div>
 
-    <script>
-        function openInNewTab(url) {
-            window.open(url, '_blank');
-        }
-    </script>
 
     <audio id="backgroundMusic" loop>
         <source src="audio/best-adventure-ever-122726.mp3" type="audio/mp3">
@@ -68,7 +27,6 @@
 
 
     <div class="content">
-        <link rel="stylesheet" href="Css/tableStyle.css">
         <div class="main">
             <h2>Schedule Table</h2>
             <table>
@@ -124,5 +82,10 @@
         <p>&copy; 2025 My Website</p>
     </div>
 
+    <script src="Js/showSlides.js"></script>
+    <script src = "Js/creativeMusic.js"></script>
+    <script src="Js/readMe.js"></script>
+    <script src = "Js/switchTheme.js"></script>
+    <script src = "Js/init.js"></script>
 </body>
 </html>
