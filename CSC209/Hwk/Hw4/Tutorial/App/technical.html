@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Themed Website</title>
+    <link id="themeStylesheet" rel="stylesheet" href="Css/style1.css">
+    <link rel="stylesheet" href="Css/tableStyle.css">
+    <link rel="stylesheet" href="Css/slideStyle.css">
+</head>
+<body>
+
+    <div class="header"></div>
+
+    <div class="topnav">
+        <a href="technical.html">Home</a>
+        <a href="duffy.html">Duffy</a>
+        <a href="shellieMay.html">ShellieMay</a>
+        <button onclick="switchTheme()" class="theme-btn" style="font-size: 15px;">Switch Theme</button>
+    </div>
+
+    <div class="content">
+        <div class="main">
+            <h2>Schedule Table</h2>
+            <button id="toggleRowBtn" style="margin-bottom: 10px;">Show First Row</button>
+            <label>
+                <input type="checkbox" id="showFirstRow"> Show First Row
+            </label>
+            <table>
+                <tr>
+                    <th>Where</th>
+                    <th>Details</th>
+                </tr>
+                <tr id="firstRow" style="display: none;">
+                    <td><a href="https://www.youtube.com/watch?v=dGhjzULaAvs">Garden</a></td>
+                    <td>With the rise of Duffy's popularity, Imagineers noticed many guests purchased multiple plush of Duffy, 
+                        giving the bears unique names and costumes. 
+                        That inspired Imagineers to create a companion to Duffy—his best friend, ShellieMay. 
+                        Based on the pair's increasing popularity, Imagineers decided to develop an entire collection of characters, 
+                        each with a distinct personality and talent: artistic cat friend, Gelatoni, dancing rabbit friend, StellaLou, 
+                        inventive dog friend, CookieAnn, and musical turtle friend, 'Olu Mel. </td>
+                </tr>
+                <tr>
+                    <td><a href="https://youtu.be/MLYQBRgTdUw?si=bVIrz98stWmZA8yj">Kitchen</a></td>
+                    <td>CookieAnn, a yellow dog with a sensitive nose and long floppy ears, is a passionate and optimistic friend who loves to invent something novel by combining things. 
+                        With a chef’s hat on her head, she is an “expert” in inventing unique recipes, bringing surprise and joy to her friends in unexpectedly delicious ways. 
+                        Curious about everything, CookieAnn’s inventions go beyond culinary creations. She has fun conjuring up out-of-the-box solutions to problems by combining different ideas. 
+                        Additionally, with her acute olfactory ability, she is able to smell “unsavory” happenings!</td>
+                </tr>
+                <tr>
+                    <td><a href = "https://sites.disney.com/waltdisneyimagineering/duffy-the-disney-bear/">Story</a></td>
+                    <td>Imagineers first created Duffy's story within the context of American Waterfront at Tokyo DisneySea. 
+                        Almost everything done at Imagineering starts with story. This particular story goes…when Mickey Mouse the sailor, 
+                        based in Cape Cod, was leaving on a long sea voyage, Minnie Mouse made Duffy to keep Mickey company during his travels. 
+                        Minnie presented her hand-sewn bear to Mickey in a duffel bag, which is how Mickey came up with the name Duffy. 
+                        But stories can evolve, and as Duffy's story has evolved, he and Mickey have visited many exciting places together, 
+                        meeting new friends along the way. With a willingness to do anything to bring a smile to his friends, and his quintessential innocence,
+                         Duffy takes all of us back to our childhood when we all had an "inner Duffy."</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sidebar">
+            <button id="readMeBtn" onclick="toggleReadMe()" style="font-weight: bold; margin-bottom: 15px;">About Me</button>
+            <p id="readMeText" style="display: none;">
+                Duffy met LinaBell when he was lost in the forest following a butterfly. LinaBell suddenly but masterfully took out her 
+                magnifying glass and started examining “clues” on Duffy’s body to figure out where he had come from. Thanks to her detective-like talent, 
+                Duffy was able to be reunited with Mickey Mouse. Duffy and the rest of the friends are often in awe of her ingenious ways of solving problems.
+            </p>
+          <p>We are so excited to introduce to you our new friend of Duffy, LinaBell. She is a fox with an inquisitive mind and the intelligence that supports it. She finds joy and excitement in solving problems and mysteries.</p>
+          <button onclick="myFunction()">Time</button>
+        </div>
+      
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 My Website</p>
+    </div>
+
+    <script src="Js/readMe.js"></script>
+    <script src="Js/switchTheme.js"></script>
+    <script src="Js/showSlides.js"></script>
+    <script src="Js/technicalInit.js"></script>
+    <script src="Js/toggleRow.js"></script>
+    <script src="Js/time.js"></script>
+
+</body>
+</html>

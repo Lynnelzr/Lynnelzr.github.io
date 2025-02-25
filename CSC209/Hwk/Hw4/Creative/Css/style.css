@@ -1,0 +1,39 @@
+#myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background-color: aquamarine;
+}
+/* Ensure all images are properly sized */
+#myContainer img {
+    z-index: 2; /* Ensure images are on top of the background */
+    width: 50px !important; 
+    height: 50px !important;
+    max-width: 50px;
+    max-height: 50px;
+    position: absolute;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Position each image inside the container */
+#redSq {
+    top: 0px;
+    left: 0px;
+}
+
+#blueSq {
+    top: 350px;
+    left: 350px;
+}
+
+#greenSq {
+    top: 350px;
+    left: 0px;
+}
+
+#blackSq {
+    top: 0px;
+    left: 350px;
+}

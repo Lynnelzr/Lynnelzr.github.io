@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access an Input Button</h3>
+
+<p>Click the button to get the text that is displayed on the button.</p>
+
+<input type="button" id="myBtn" onclick="myFunction()" value="Try it">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myBtn").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

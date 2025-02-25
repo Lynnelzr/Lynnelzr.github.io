@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to create an URL field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "url");
+  x.setAttribute("value", "http://www.google.com");
+  document.body.appendChild(x);
+}
+</script>
+
+</body>
+</html>
