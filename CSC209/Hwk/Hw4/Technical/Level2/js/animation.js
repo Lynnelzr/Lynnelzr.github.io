@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 square.style.left = positionLeft + 'px';
             }
         }, speed);
+        
     }
 
     // Attach each button to its corresponding square

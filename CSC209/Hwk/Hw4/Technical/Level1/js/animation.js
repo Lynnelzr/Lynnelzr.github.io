@@ -30,6 +30,7 @@ function moveBlue() {
             blueSquare.style.left = bluePos + 'px'; // Move left
         }
     }
+    
 }
 
 // Attach moveRed function to the button click event
