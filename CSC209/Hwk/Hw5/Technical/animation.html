@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="controls">
+        <input type="number" id="numPoints" min="1" max="100" value="5">
+        <button id="generateBtn">Generate New Number of Points</button>
+        <button id="UpdatePoints">Animate</button>
+        <button id="resetBtn">Reset</button>
+        <button id ="generatePos">Generate New Positions</button>
+        <label class="trace-label">
+            <input type="checkbox" id="myCheck"> Keep a trace
+        </label>
+    </div>
+
+    <canvas id="logoCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("logoCanvas");
+        const ctx = canvas.getContext("2d");
+        let NRPTS = parseInt(document.getElementById("numPoints").value);
+        let NRSTEPS = 10;
+        let points = [];
+        let animate = false;
+        const colors = ["red", "blue", "green", "orange", "purple", "cyan", "magenta"];
+        const checkbox = document.getElementById("myCheck");
+        
+        document.getElementById("generatePos").addEventListener("click", () => {
+            initPoints();
+            drawPoints();
+        });
+
+        document.getElementById("generateBtn").addEventListener("click", () => {
+            NRPTS = parseInt(document.getElementById("numPoints").value);
+            initPoints();
+            drawPoints();
+        });
+
+        document.getElementById("myCheck").addEventListener("click", () => {
+            console.log("Checkbox state:", checkbox.checked);
+        });
+
+
+        document.getElementById("resetBtn").addEventListener("click", () => {
+            reset();
+        });
+
+        document.getElementById("UpdatePoints").addEventListener("click", () => {
+           animate = true;
+           update();
+        });
+
+        
+    </script>
+
+    <script src="js/circles.js"></script>
+</body>
+</html> 
