@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel = "stylesheet" href ="css/style.css">
+</head>
+<body>
+
+<div class="controls">
+    <label for="numRows">Rows:</label>
+    <input type="number" id="numRows" min="5" max="50" placeholder="Enter rows">
+    
+    <label for="numCols">Columns:</label>
+    <input type="number" id="numCols" min="5" max="50" placeholder="Enter columns">
+    
+    <button onclick="setGridSize()">Generate Grid</button>
+
+    <button onclick="startGame()">Start</button>
+    <button onclick="stopGame()">Stop</button>
+    <button onclick="resetGrid()">Reset</button>
+    <button id = "randomeGenerate">Random</button>
+    <button id = "nextStep">Next</button>
+</div>
+    
+
+<table id="gameTable"></table>
+
+<script>
+    let grid = [];
+    let nextGrid = [];
+    let running = false;
+    let interval;
+    let rows;
+    let cols;
+
+    document.getElementById("nextStep").addEventListener("click", () => {
+        updateGrid();
+    });
+    document.getElementById("randomeGenerate").addEventListener("click", () => {
+        randomizeGrid();
+    });
+    
+</script>
+
+<script src="js/game.js"></script>
+
+</body>
+</html>

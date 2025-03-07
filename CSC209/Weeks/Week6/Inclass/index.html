@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel = "stylesheet" href ="css/style.css">
+</head>
+<body>
+
+<div class="controls">
+    <label>Rows: <input type="number" id="numRows" value="20" min="5" max="50"></label>
+    <label>Columns: <input type="number" id="numCols" value="20" min="5" max="50"></label>
+    <button onclick="startGame()">Start</button>
+    <button onclick="stopGame()">Stop</button>
+    <button onclick="resetGrid()">Reset</button>
+
+    <button onclick="random()">Random</button>
+    <button onclick="next()">Next</button>
+</div>
+
+<table id="gameTable"></table>
+
+<script>
+    const rows = 20;
+    const cols = 20;
+    let grid = [];
+    let nextGrid = [];
+    let running = false;
+    let interval;
+    
+</script>
+
+<script src="js/game.js"></script>
+
+</body>
+</html>
