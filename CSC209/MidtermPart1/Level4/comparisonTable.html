@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href = "css/comparisonTable.css">
+</head>
+<body>
+
+<h2>Comparison Table</h2>
+
+<p>The link tag in the head section is used to include external css stylesheets. The first link tag imports a library, Font Awesome, which provides the icons including check and cross signs used in the table. 
+ The second link tag imports the CSS file `comparisonTable.css`, which styles the table's layout, colors, and other style elements that we can edit on.</p>
+
+<table id="comparisonTable">
+  <tr>
+    <th style="width:50%">Name</th>
+    <th>Part1</th>
+    <th>Part2</th>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+</table>
+
+<script>
+  function addRow (basic, pro){
+    // a variable with a template row
+    let ROW = '<tr><td>New Feature</td><td><i class="fa CHECKCROSSBASIC"></i></td><td><i class="fa CHECKCROSSPRO"></i></td></tr>';
+    //replace with actual css class names
+    let newRow = ROW.replace("CHECKCROSSBASIC", basic).replace("CHECKCROSSPRO", pro);
+    //append the new row to the table
+    document.getElementById("comparisonTable").innerHTML += newRow;
+  }
+
+  addRow("fa-check", "fa-check");
+</script>
+
+</body>
+</html>

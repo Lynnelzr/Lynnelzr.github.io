@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+.icon-bar {
+  display: flex; 
+  background-color: #555;
+  overflow-x: auto; 
+  white-space: nowrap; 
+  padding: 10px 0;
+  justify-content: flex-start; 
+}
+
+.icon-bar a {
+  flex: 1;
+  max-width: 100px;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <link rel="stylesheet" href="../css/movie.css">
+</head>
+<body>
+    <input type="number" id="numPoints" min="1" max="100" value="5">
+    <button id="generateBtn">Generate New Number of Points</button>
+    <button id = "UpdatePoints">Animate</button>
+    <button id ="generatePos">Generate New Positions</button>
+    
+    <canvas id="logoCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("logoCanvas");
+        const ctx = canvas.getContext("2d");
+        let NRPTS = parseInt(document.getElementById("numPoints").value);
+        let points = [];
+        let animate = false;
+        const colors = ["red", "blue", "green", "orange", "purple", "cyan", "magenta"];
+
+        window.onload = function () {
+            // Initialize and start animation
+            initPoints();
+            drawPoints();
+        };
+
+        document.getElementById("generatePos").addEventListener("click", () => {
+            initPoints();
+            drawPoints();
+        });
+        
+        document.getElementById("generateBtn").addEventListener("click", () => {
+            NRPTS = parseInt(document.getElementById("numPoints").value);
+            initPoints();
+            drawPoints();
+        });
+
+        document.getElementById("UpdatePoints").addEventListener("click", () => {
+           animate = true;
+           update();
+        });
+    </script>
+    
+    <script src="../js/movie.js"></script>
+</body>
+</html>
