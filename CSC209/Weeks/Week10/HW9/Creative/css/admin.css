@@ -1,0 +1,59 @@
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f9f9f9;
+padding: 40px;
+margin: 0;
+}
+
+h1 {
+text-align: center;
+color: #333;
+}
+
+.container {
+max-width: 600px;
+margin: 0 auto;
+background-color: white;
+border-radius: 10px;
+padding: 30px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button {
+display: block;
+margin: 20px auto;
+padding: 12px 24px;
+background-color: #04AA6D;
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #038e5a;
+}
+
+#userCount {
+font-weight: bold;
+font-size: 18px;
+margin-top: 10px;
+text-align: center;
+color: #444;
+}
+
+ul#userList {
+margin-top: 20px;
+list-style-type: none;
+padding: 0;
+}
+
+ul#userList li {
+background-color: #f1f1f1;
+padding: 10px;
+margin-bottom: 5px;
+border-radius: 5px;
+text-align: center;
+color: #333;
+}

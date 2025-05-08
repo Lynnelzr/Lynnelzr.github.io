@@ -1,0 +1,178 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../image/homePageBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.icon-bar {
+    display: flex;
+    gap: 20px;
+}
+.icon-bar a {
+    color: #333;
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.icon-bar a:hover {
+    color: #2980b9;
+}
+.user-menu {
+    position: relative;
+}
+.user-icon {
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 8px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 100;
+}
+.dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+#writeForm {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 320px;
+    max-width: 90%;
+}
+
+#writeForm h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+#writeForm textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+#writeForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#hashtagField {
+    margin-top: 10px;
+}
+
+#writeForm input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#writeForm button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #64aecb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#writeForm button:hover {
+    background-color: #64aecb;
+}
+#searchBar {
+    text-align: center;
+    margin-top: 60px;
+}
+#searchInput {
+    width: 60%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+#searchBar button {
+    padding: 10px 16px;
+    margin-left: 10px;
+    border: none;
+    background-color: #64aecb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#searchResults {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+}
+.entry-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+}
+.entry-card h4 {
+    margin-top: 0;
+    color: #4a90e2;
+}
+.entry-card p {
+    margin: 8px 0 0;
+    color: #555;
+    word-break: break-word;
+}

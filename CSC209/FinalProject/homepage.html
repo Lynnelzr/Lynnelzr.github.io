@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MemoryLane Homepage</title>
+  <link rel = "stylesheet" href="fonts/all.min.css">
+  <link rel = "stylesheet" href="css/homepage.css">
+</head>
+<body>
+
+<!-- topbar original code borrowed from midterm -->
+<div class="topbar">
+  <div class="icon-bar"> 
+    <a href="homepage.html" title="Home"><i class="fa fa-home"></i></a>
+    <a href="calendar.html" title="Calendar"><i class="fa fa-calendar"></i></a>
+    <a href="#" id="openWriteForm" title="Write Entry"><i class="fa fa-pencil"></i></a>
+  </div>
+  <div class="Welcome Words">
+    <h3>Welcome to your MemoryLane</h3>
+  </div>
+  <div class="user-menu">
+    <!-- dropdown menu original code from w3schools -->
+    <div class="user-icon" onclick="toggleDropdown()">
+      <i class="fa fa-user-circle"></i> <span id="usernameDisplay"></span>
+    </div>
+    <div id="dropdownMenu" class="dropdown">
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div>
+</div>
+
+<div id="writeForm">
+  <h3>Write Entry for Today</h3>
+  <textarea id="entryText" placeholder="Write your thoughts..."></textarea>
+  <label><input type="checkbox" id="isPublicCheckbox" onchange="toggleHashtagField()"> Make this entry public</label>
+  <div id="hashtagField">
+    <label for="hashtags">Hashtags (comma-separated):</label>
+    <input type="text" id="hashtags" placeholder="motivation, dailyLife">
+  </div>
+  <button onclick="submitEntry()">Done</button>
+</div>
+
+<div id="searchBar">
+  <input type="text" id="searchInput" placeholder="Search public entries by hashtag...">
+  <button onclick="searchEntries()">Search</button>
+</div>
+
+<div id="searchResults">
+  <p style="color: #666;">See what others are writing about!</p>
+</div>
+
+<script>
+  const sessionUsername = sessionStorage.getItem('username');
+
+  if (sessionUsername) {
+    document.getElementById('usernameDisplay').textContent = sessionUsername;
+  } else {
+    fetch('php/get_username.php')
+      .then(response => response.text())
+      .then(username => {
+        document.getElementById('usernameDisplay').textContent = username || "User";
+      });
+  }
+
+  document.getElementById('openWriteForm').onclick = function () {
+    document.getElementById('writeForm').style.display = 'block';
+  };
+</script>
+
+<script src="js/homepage.js"></script>
+<script src="js/bar.js"></script>
+<script src="js/search.js"></script>
+
+</body>
+</html>

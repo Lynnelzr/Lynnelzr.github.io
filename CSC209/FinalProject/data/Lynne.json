@@ -1,0 +1,97 @@
+{
+    "2025-04-17": [
+        {
+            "text": "Testing first entry April 17 Lynne, private",
+            "isPublic": false,
+            "hashtags": []
+        },
+        {
+            "text": "Testing for second entry. Lynne April 17 public",
+            "isPublic": true,
+            "hashtags": [
+                "public",
+                "testing",
+                "second",
+                "April"
+            ]
+        }
+    ],
+    "2025-04-23": [
+        {
+            "text": "Nice Weather Today!",
+            "isPublic": true,
+            "hashtags": [
+                "testing"
+            ]
+        },
+        {
+            "text": "inclass presentation!",
+            "isPublic": false,
+            "hashtags": []
+        },
+        {
+            "text": "diary1",
+            "isPublic": false,
+            "hashtags": []
+        },
+        {
+            "text": "diary1",
+            "isPublic": false,
+            "hashtags": []
+        },
+        {
+            "text": "dairy2",
+            "isPublic": false,
+            "hashtags": []
+        },
+        {
+            "text": "testing bar",
+            "isPublic": false,
+            "hashtags": []
+        }
+    ],
+    "2025-04-27": [
+        {
+            "text": "April 27",
+            "isPublic": false,
+            "hashtags": []
+        }
+    ],
+    "2025-04-29": [
+        {
+            "text": "Sunshine!",
+            "isPublic": false,
+            "hashtags": []
+        },
+        {
+            "text": "final week is coming",
+            "isPublic": true,
+            "hashtags": [
+                "final"
+            ]
+        }
+    ],
+    "2025-04-30": [
+        {
+            "text": "hello world!",
+            "isPublic": false,
+            "hashtags": []
+        }
+    ],
+    "2025-05-04": [
+        {
+            "text": "Happy May 4th",
+            "isPublic": true,
+            "hashtags": [
+                "May"
+            ]
+        },
+        {
+            "text": "final weeeek!",
+            "isPublic": true,
+            "hashtags": [
+                "testing"
+            ]
+        }
+    ]
+}

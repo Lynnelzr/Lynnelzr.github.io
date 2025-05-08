@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MemoryLane Admin Dashboard</title>
+  <link rel="stylesheet" href = "css/admin.css">
+</head>
+<body>
+
+  <h1>MemoryLane Admin Dashboard</h1>
+
+  <div class="section" id="userStats">
+    <h2>Registered Users</h2>
+    <p>Total: <span id="userCount">...</span></p>
+    <ul id="userList"></ul>
+  </div>
+
+  <div class="section" id="entryStats">
+    <h2>Entries Submitted Today</h2>
+    <p>Total: <span id="entryCount">...</span></p>
+    <ul id="entryList"></ul>
+  </div>
+
+  <div class="section" id="activityStats">
+    <h2>Overall User Activity</h2>
+    <p>Total Entries: <span id="totalEntries">...</span></p>
+    <p>Average Entries per User: <span id="averageEntries">...</span></p>
+  </div>
+
+  <script src = "js/admin.js"></script>
+</body>
+</html>
